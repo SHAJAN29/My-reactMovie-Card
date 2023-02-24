@@ -4,6 +4,7 @@ import "./Addmovies.css";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useEffect, useState } from "react";
+import { API } from "../globel.js";
 
 function Addmovies(getMovies) {
   const [name, setName] = useState("");
@@ -12,32 +13,28 @@ function Addmovies(getMovies) {
   const [summary, setSummary] = useState("");
   const [trailer, setTrailer] = useState("");
   const navigate = useNavigate();
-  
-  const addmovie =async () => {
-    
 
+  const addmovie = async () => {
     const moviesData = {
-     name: name,
-       poster: poster,
-       rating: rating,
+      name: name,
+      poster: poster,
+      rating: rating,
       summary: summary,
       trailer: trailer,
     };
     console.log(moviesData);
 
-   await fetch("https://63d75fba5dbd723244249ead.mockapi.io/movies", {
+    await fetch(`{API}/movies`, {
       method: "POST",
       body: JSON.stringify(moviesData),
       headers: {
         "content-type": "application/json",
       },
-    } 
-    );
+    });
 
-   navigate( "/movies");
+    navigate("/movies");
   };
 
-  
   return (
     <div className="addmovie">
       <Stack spacing={2} sx={{ maxWidth: "50em", minWidth: "25em" }}>
@@ -46,14 +43,13 @@ function Addmovies(getMovies) {
           id="outlined-success"
           label="name"
           variant="outlined"
-         
         />
         <TextField
           onChange={(event) => setPoster(event.target.value)}
           id="outlined-success"
           label="poster"
           variant="outlined"
-          sx={{textTransform:"lowercase"}}
+          sx={{ textTransform: "lowercase" }}
         />
         <TextField
           onChange={(event) => setRating(event.target.value)}
@@ -75,7 +71,7 @@ function Addmovies(getMovies) {
         />
 
         <Button variant="contained" onClick={addmovie}>
-      😍 add
+          😍 add
         </Button>
       </Stack>
     </div>

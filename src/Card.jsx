@@ -6,10 +6,11 @@ import Badge from "@mui/material/Badge";
 import InfoIcon from "@mui/icons-material/Info";
 import { useNavigate } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from "@mui/icons-material/Edit";
 import "./Card.css";
+import { API } from "../globel";
 
-export function Card({ movie}) {
+export function Card({ movie }) {
   const navigate = useNavigate();
   const { poster, name, rating, summary, id } = movie;
 
@@ -17,13 +18,12 @@ export function Card({ movie}) {
   const [like, setLike] = useState(0);
   const [dislike, setDislike] = useState(0);
 
-  const deleteMovie = async(id) => {
-    await fetch(`https://63d75fba5dbd723244249ead.mockapi.io/movies/${id}`,
-    {
+  const deleteMovie = async (id) => {
+    await fetch(`${API}/movies/${id}`, {
       method: "DELETE",
     });
 
-    window. location. reload(navigate( "/movies"));
+    window.location.reload(navigate("/movies"));
   };
 
   return (
@@ -89,9 +89,9 @@ export function Card({ movie}) {
               </IconButton>
             </Badge>
 
-       {/*-----------------EditIcon icon--------------------*/}
+            {/*-----------------EditIcon icon--------------------*/}
             <IconButton
-              sx={{ marginLeft: "auto",width:"fit-content" }}
+              sx={{ marginLeft: "auto", width: "fit-content" }}
               onClick={() => navigate(`/editmovies/${movie.id}`)}
               color={"success"}
               aria-label="DELETE FORM CART"
@@ -99,11 +99,10 @@ export function Card({ movie}) {
               <EditIcon />
             </IconButton>
 
-
             {/*-----------------deleteMovie icon--------------------*/}
 
             <IconButton
-              sx={{ marginLeft: "auto",width:"fit-content" }}
+              sx={{ marginLeft: "auto", width: "fit-content" }}
               onClick={() => deleteMovie(movie.id)}
               color={"secondary"}
               aria-label="DELETE FORM CART"
