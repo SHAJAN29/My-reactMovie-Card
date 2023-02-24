@@ -1,0 +1,45 @@
+.trailerpPage{
+
+
+text-transform: capitalize;
+min-height: 100vh;
+
+}
+.trailerImage{
+
+width: 100%;
+
+
+}
+.trailerImage img{
+    margin: 20px auto;
+width: 100%;
+object-fit: cover;
+height: auto;
+
+}
+.trailerpPageContent{
+
+margin: 5px auto;
+
+}
+
+.trailerpPageContent h1{
+
+padding: 10px 0;
+}
+.trailerpPageContent p{
+
+padding: 10px 0;
+font-weight: 500;
+
+}
+.trailerpPageContent p:nth-child(3) span{
+
+padding-right: 30px;
+font-weight: 500;
+}
+iframe{
+
+    width: 100%;
+}

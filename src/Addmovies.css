@@ -1,0 +1,14 @@
+.addmovie{
+
+min-height: 100vh;
+
+padding: 5em;
+z-index: 5;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#outlined-success{
+
+text-transform: lowercase;
+}

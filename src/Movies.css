@@ -1,0 +1,23 @@
+.moviesss{
+
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+  
+  
+    scroll-behavior: smooth;
+}
+#scrollarrow {
+    text-indent: -9999px;
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background: url(https://wallpapercave.com/img/arrowup.png) no-repeat;
+    background-size: 42px 42px;
+    z-index: 2;
+    scroll-behavior: smooth;
+}
