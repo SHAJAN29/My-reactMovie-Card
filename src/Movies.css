@@ -1,12 +1,11 @@
 .moviesss{
 
-    display: flex;
-    justify-content: center;
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
 
-    flex-wrap: wrap;
-
-  
-  
+ justify-items: center;
+   justify-content: center;
+   gap: 16px;
     scroll-behavior: smooth;
 }
 #scrollarrow {
