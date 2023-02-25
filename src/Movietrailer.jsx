@@ -41,7 +41,7 @@ export function Movietrailer() {
   return (
     <div className="trailerpPage">
       <iframe
-        width="auto"
+        width="100%"
         height="503"
         src={movie.trailer}
         title="VIKRAM - Official Trailer | Kamal Haasan | VijaySethupathi, FahadhFaasil | LokeshKanagaraj | Anirudh"

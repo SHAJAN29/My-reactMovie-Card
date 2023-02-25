@@ -25,6 +25,7 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useReducer } from "react";
+import { BasicForm } from "./BasicForm";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -185,6 +186,7 @@ function App() {
               <Route path="/*" element={<Error />} />
               <Route path="/Addmovies" element={<Addmovies />} />
               <Route path="/editmovies/:id" element={<Editmovies />} />
+              <Route path="/basicFORM" element={<BasicForm />} />
             </Routes>
           </div>
         </Paper>
