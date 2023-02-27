@@ -4,6 +4,7 @@ import "./Movies.css";
 // import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { API } from "../globel.js";
+// import { Link } from "react-router-dom";
 export function Movies() {
   // const [movieList,setMovieList]= useState([])
   const { isLoading, data: movieList } = useQuery(
@@ -43,10 +44,6 @@ export function Movies() {
       {movieList.map((num) => (
         <Card key={num.id} movie={num} />
       ))}
-
-      <a href="#" id="scrollarrow">
-        Scroll up this page
-      </a>
     </div>
   );
 }
