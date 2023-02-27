@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import "./Movies.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { API } from "../globel";
+import { API } from "../globel.js";
 export function Movies() {
   // const [movieList,setMovieList]= useState([])
   const { isLoading, data: movieList } = useQuery(

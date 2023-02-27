@@ -1,13 +1,13 @@
 import "./App.css";
 import "./Movies.css";
-import TextField from "@mui/material/TextField";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
-import IconButton from "@mui/material/IconButton";
+// import TextField from "@mui/material/TextField";
+import { Routes, Route, useNavigate } from "react-router-dom";
+// import IconButton from "@mui/material/IconButton";
 import { Movietrailer } from "./Movietrailer";
 import { Movies } from "./Movies";
 import { Editmovies } from "./Editmovies";
 import { Home } from "./Home";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Addmovies } from "./Addmovies";
 import Button from "@mui/material/Button";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
@@ -17,14 +17,14 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
+
 import {
   QueryClientProvider,
   QueryClient,
-  useQuery,
+  // useQuery,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { useReducer } from "react";
+// import { useReducer } from "react";
 import { BasicForm } from "./BasicForm";
 
 function App() {
@@ -243,16 +243,16 @@ function Appbar({ mode, setMode }) {
         </Typography>
 
         <Button
-          onClick={() => setMode(mode == "light" ? "dark" : "light")}
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
           sx={{
             display: { xs: "flex", md: "flex" },
             marginLeft: "auto",
             overflow: "hidden",
           }}
           variant="contained"
-          startIcon={mode == "light" ? <Brightness4Icon /> : <WbSunnyIcon />}
+          startIcon={mode === "light" ? <Brightness4Icon /> : <WbSunnyIcon />}
         >
-          {mode == "light" ? "Dark" : "light"}{" "}
+          {mode === "light" ? "Dark" : "light"}{" "}
         </Button>
       </Toolbar>
     </AppBar>
@@ -266,6 +266,7 @@ function Error() {
         src={
           "https://cdn.dribbble.com/users/1175431/screenshots/6188233/404-error-dribbble-800x600.gif"
         }
+        alt="imag"
       />
     </div>
   );

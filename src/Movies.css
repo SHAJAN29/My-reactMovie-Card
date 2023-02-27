@@ -6,7 +6,7 @@
  justify-items: center;
    justify-content: center;
    gap: 16px;
-    scroll-behavior: smooth;
+
 }
 #scrollarrow {
     text-indent: -9999px;
@@ -18,5 +18,5 @@
     background: url(https://wallpapercave.com/img/arrowup.png) no-repeat;
     background-size: 42px 42px;
     z-index: 2;
-    scroll-behavior: smooth;
+
 }
