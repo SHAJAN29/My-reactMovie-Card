@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import "./Card.css";
-import { API } from "../globel";
+import { API } from "../globel.js";
 
 export function Card({ movie }) {
   const navigate = useNavigate();

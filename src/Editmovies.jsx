@@ -2,7 +2,7 @@ import { Button, Stack, TextField } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { API } from "../globel";
+import { API } from "../globel.js";
 
 export function Editmovies() {
   const { id } = useParams();

@@ -5,7 +5,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import { useQuery } from "@tanstack/react-query";
-import { API } from "../globel";
+import { API } from "../globel.js";
 
 export function Movietrailer() {
   const { id } = useParams();
