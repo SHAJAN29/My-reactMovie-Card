@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "./Movietrailer.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import { useQuery } from "@tanstack/react-query";
 import { API } from "../globel.js";

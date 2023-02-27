@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import "./Addmovies.css";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { API } from "../globel.js";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -33,7 +33,8 @@ function Addmovies(getMovies) {
       },
       validationSchema: formValidationScama,
       onSubmit: (newMovie) => {
-        console.log("form values", ":", newMovie), addmovie(newMovie);
+        console.log("form values", ":", newMovie);
+        addmovie(newMovie);
       },
     });
 

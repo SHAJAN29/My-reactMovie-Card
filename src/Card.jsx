@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -37,7 +37,7 @@ export function Card({ movie }) {
             <h1 className="titer">
               {name}{" "}
               <button className="btn1" onClick={() => setView(!view)}>
-                {view == true ? (
+                {view === true ? (
                   <KeyboardArrowDownIcon />
                 ) : (
                   <KeyboardArrowUpIcon />
@@ -46,7 +46,7 @@ export function Card({ movie }) {
               <IconButton
                 size="small"
                 color="inherit"
-                onClick={() => navigate(`/movies/${movie.id}`)}
+                onClick={() => navigate(`/movies/${id}`)}
               >
                 <InfoIcon
                   size="small"
@@ -61,7 +61,7 @@ export function Card({ movie }) {
             </p>
           </div>
 
-          <p className={view == true ? "summary" : "summaryhide"}>{summary}</p>
+          <p className={view === true ? "summary" : "summaryhide"}>{summary}</p>
 
           {/*-----------------card icons--------------------*/}
           <div className="icons">
@@ -92,7 +92,7 @@ export function Card({ movie }) {
             {/*-----------------EditIcon icon--------------------*/}
             <IconButton
               sx={{ marginLeft: "auto", width: "fit-content" }}
-              onClick={() => navigate(`/editmovies/${movie.id}`)}
+              onClick={() => navigate(`/editmovies/${id}`)}
               color={"success"}
               aria-label="DELETE FORM CART"
             >
